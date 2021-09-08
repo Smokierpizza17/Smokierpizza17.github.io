@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" sizes="96x96" href="./static/white_logo.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <link href="./static/landscape.css" rel="stylesheet" media="screen and (orientation: landscape)">
+    <link href="./static/portrait.css" rel="stylesheet" media="screen and (orientation: portrait)" >
+    <title>Inaccuweather II</title>
+  </head>
+  <body>
+  <div class="mainWrapper">
+    <div id="quickmenu"> 
+      <div id="logoBox" class="floatLeft">
+        <img src="./static/white_logo.png" id="logo" alt="logo"/>
+      </div> 
+      <div class="floatRight">
+        <b id='name'>Inaccuweather 2.0</b>
+        <a href="/">Home</a>
+        <a href="#wasIst">Was ist das?</a>
+        <a href="#wieGeht">Wie geht das?</a>
+        <a href="#wieFunktioniert">Wie funktioniert das?</a>
+        <a href="#wieGenau">Wie genau ist es?</a>
+        <a href="#bottom">Links</a>
+      </div>
+    </div>
+    <div id="main" background="./static/background.png">
+      <div id="embedded_box" align="center">
+        <h1>präzise Wettervorhersagen</h1>
+        <div>
+          <form method='POST'>
+            <table>
+             <tr>
+              <td>
+               Adresse:
+              </td>
+              <td>
+               <input type="text" name="adr" value="Hindemithstraße 6, Ingolstadt">
+               </td>
+             </tr>
+             <tr>
+              <td>
+               Datum:
+              </td>
+              <td>
+               <input type="date" name="day" value="">
+               </td>
+             </tr>
+             <tr>
+              <td>
+               TMIN:
+              </td>
+              <td>
+               <input type="text" name="tmin" value="">°C
+               </td>
+             </tr>
+             <tr>
+              <td>
+               TMAX:
+              </td>
+              <td>
+               <input type="text" name="tmax" value="">°C
+               </td>
+             </tr>
+            </table>
+            <input type="submit" value="los!">
+        </form> 
+        </div><br/>
+        <br/>
+      </div>
+    </div>
+  </div>
+    <div class="wrapper">
+      <div class="textBox floatLeft">
+        <p class="textBoxTitle" id="wasIst">Was ist das?</p>
+        <p class="textBoxBody">InAccuweather ist ein Projekt, der schon seit 2018 läuft. Das erste Version (1.0) befasste sich mit der regelmäßigen Fehler der Wettervorhersage in Ingolstadt. Das zweite Version (2.0) ist jedoch ein Wettervorhersagemodell, der anhand eines künstlichen Intelligentes das Wetter überall auf der Welt vorhersagen kann.</p>
+      </div>
+      <div class="imageBox floatRight"><img class="extra_image" src="./static/standfoto.jpg"/></div>
+    </div>
+    <div class="wrapper">
+      <div class="textBox floatRight">
+        <p class="textBoxTitle" id="wieGeht">Wie geht das?</p>
+        <p class="textBoxBody">Normale Wettervorhersagemodelle werden von Meteorologen per Hand erstellt. InAccuweather 2, dagegen, wurde mithilfe eines KIs erstellt. In dem man den KI das Wetter des vorherigen Tages zeigt, kann er mit ziemlicher Genauigkeit das Wetter des nächsten Tages vorhersagen</p>
+      </div>
+      <div class="imageBox floatLeft"><img class="extra_image"src="./static/weatherStation.jpg"/></div>
+    </div>
+    <div class="wrapper">
+      <div class="textBox floatLeft">
+        <p class="textBoxTitle" id="wieFunk">Wie funktioniert der KI?</p>
+        <p class="textBoxBody">KIs werden trainiert, in dem man es richtig gemachte Lösungen zeigt. Zum Beispiel könnte man ein KI trainieren, in dem man die Körpermasse und Größe eines Hundes zeigt und dann die Rasse des Hundes. Dadurch erkennt der KI zusammenhänge, die wir alleine nicht erkennen würden. Ich habe den KI alle Wettergeschehnisse zwischen 2016 und 2018 gezeigt und dann anhand die Beobachtungen von 2019 getestet.</p>
+      </div>
+      <div class="imageBox floatRight"><img class="extra_image" src="./static/regressor_example.png"/></div>
+    </div>
+    <div class="wrapper">
+      <div class="textBox floatRight">
+        <p class="textBoxTitle" id="wieGenau">Wie genau ist denn der KI?</p>
+        <p class="textBoxBody">Die Durchschnittliche Abweichung liegt bei ungefähr 2.7°C, jedoch ist die Hälfte aller Abweichungen unter 2°C. 80% der Abweichungen sind genauer als 4°C und nur 10% weichen um mehr als 5°C ab.</p>
+      </div>
+      <div class="imageBox floatLeft"><img class="extra_image" src="./static/histogram.svg"/></div>
+    </div>
+    <div id="bottom">
+    <p class="textBoxTitle">weiterführende Links</p>
+    <p><a href="https://scikit-learn.org/stable/index.html" target="_blank">scikit-learn Homepage</a></p>
+    <p><a href="https://de.wikipedia.org/wiki/Datei:Wetterstation_Fichtelberg.jpg" target="_blank">Wetterstation Bild von Devilsanddust</a></p>
+    <p>Hintergrundbild: ©Oskar Munro</p>
+    <p><a href="#top">nach oben</a></p>
+    </div>
+  </body>
+</html>
